@@ -1,0 +1,38 @@
+{
+  "name": "genpark-agentic-lead-score-velocity-evaluator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Autonomous customer lead scoring and interaction velocity evaluator predicting conversion probabilities and next-best-actions.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "sales-intelligence",
+  "tags": [
+    "lead-scoring",
+    "intent-modeling",
+    "conversion-velocity",
+    "next-best-action",
+    "crm-intelligence"
+  ],
+  "inputs": {
+    "session_dwell_time_sec": {
+      "type": "integer",
+      "default": 340
+    },
+    "page_views_count": {
+      "type": "integer",
+      "default": 6
+    }
+  },
+  "outputs": {
+    "total_intent_score": {
+      "type": "integer"
+    },
+    "funnel_stage": {
+      "type": "string"
+    },
+    "next_best_action": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
